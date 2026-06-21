@@ -1,24 +1,42 @@
 # RAGHub: A Directory of Tools for Retrieval-Augmented Generation (RAG)
 
-Welcome to **RAGHub**, a living collection of **new and emerging frameworks, projects, and resources** in the **Retrieval-Augmented Generation (RAG)** ecosystem. This is a **community-driven project for [r/RAG](https://www.reddit.com/r/Rag/)**, where we aim to catalog the rapid growth of RAG tools and projects that are pushing the boundaries of the field.
+Welcome to **RAGHub**, a living collection of frameworks, projects, services, papers, and resources in the **Retrieval-Augmented Generation (RAG)** ecosystem.
 
-Each day, it feels like a new tool or framework emerges, and choosing the right one is becoming more of an art than a science. Is the framework from three months ago still relevant? Or was it just hype, rehashing old concepts with a fresh look? **RAGHub exists to help you stay ahead of these changes**, providing a platform for the latest innovations in RAG.
+RAGHub is intended as a practical research directory for people comparing RAG-related tools and techniques. It is not a benchmark, endorsement list, security review, or production-readiness assessment.
+
+## Project Status and Boundaries
+
+RAGHub is a curated informational directory. Inclusion in this repository does not mean that a listed resource has been endorsed, audited, benchmarked, security reviewed, or validated for production use.
+
+Readers should treat this directory as a starting point for research. Before adopting a listed tool or service, check its documentation, licence, security posture, maintenance activity, pricing, and suitability for your own use case.
+
+Activity labels, star counts, pricing, licences, product scope, and hosted availability may change quickly. Contributors should verify metadata before submitting updates.
+
+## Provenance and Attribution
+
+This repository currently contains an MIT licence file with existing copyright attribution. That attribution should be preserved unless repository history or upstream project records clearly support a different change.
+
+Repository ownership, a fork, a copy, or an account transfer is not proof of original authorship. See [PROVENANCE.md](PROVENANCE.md) for the current provenance and attribution boundary.
 
 ## How to Contribute
 
-This is a community project, and **we welcome contributions from everyone**! If you’d like to add a new framework, project, or resource, please check out our [Contribution Guidelines](CONTRIBUTING.md) for details on how to get started.
+This is a community project, and **we welcome contributions from everyone**. If you’d like to add a new framework, project, or resource, please check out our [Contribution Guidelines](CONTRIBUTING.md) for details on how to get started.
 
 ## Table of Contents
 
 - [RAGHub: A Directory of Tools for Retrieval-Augmented Generation (RAG)](#raghub-a-directory-of-tools-for-retrieval-augmented-generation-rag)
+  - [Project Status and Boundaries](#project-status-and-boundaries)
+  - [Provenance and Attribution](#provenance-and-attribution)
   - [How to Contribute](#how-to-contribute)
   - [Table of Contents](#table-of-contents)
+  - [FAQ](#faq)
   - [RAG Frameworks](#rag-frameworks)
   - [RAG Evaluation and Optimization Frameworks](#rag-evaluation-and-optimization-frameworks)
   - [RAG Engines](#rag-engines)
-  - [FAQ](#faq)
+  - [RAG Data Preparation Frameworks](#rag-data-preparation-frameworks)
+  - [RAG Projects](#rag-projects)
   - [RAG Resources and Sites](#rag-resources-and-sites)
-  - [Model LeaderBoards](#model-leaderboards)
+  - [Model Leaderboards](#model-leaderboards)
   - [License](#license)
   - [Join the Conversation](#join-the-conversation)
 
@@ -27,7 +45,7 @@ This is a community project, and **we welcome contributions from everyone**! If 
 
 ### What is RAG (Retrieval-Augmented Generation)?
 
-**RAG** is a technique that enhances Large Language Model (LLM) responses by retrieving relevant information from external knowledge sources before generating answers. This approach reduces hallucinations and provides more accurate, contextually relevant responses based on actual data.
+**RAG** is a technique that enhances Large Language Model (LLM) responses by retrieving relevant information from external knowledge sources before generating answers. This approach can reduce hallucinations and provide more contextually relevant responses when retrieval, grounding, and evaluation are implemented well.
 
 ### How do I choose the right RAG framework?
 
@@ -48,36 +66,41 @@ Consider these factors when selecting a framework:
 
 ### Do I need a vector database for RAG?
 
-Yes, vector databases store document embeddings for semantic search. Popular options:
+Not always, but vector databases are commonly used to store document embeddings for semantic search. Popular options include:
 
-| Database | Best For |
-|----------|---------|
+| Database | Common Use |
+|----------|------------|
 | **ChromaDB** | Prototyping, easy setup |
-| **Qdrant** | Production, high performance |
-| **Pinecone** | Enterprise, managed service |
+| **Qdrant** | Production-oriented vector search |
+| **Pinecone** | Managed vector database service |
 | **Weaviate** | Hybrid search, GraphQL |
 
 ### How do I evaluate my RAG system?
 
-Use evaluation frameworks listed in this directory:
+Use evaluation and observability frameworks listed in this directory, and test against your own data, questions, failure cases, and expected citation behaviour.
 
-- **ragas**: Measures faithfulness, answer relevancy, context precision
-- **Trulens**: Feedback functions for quality assessment
-- **Phoenix**: Observability and troubleshooting tools
-- **Deepchecks**: Continuous validation and drift detection
+Common evaluation concerns include:
+
+- retrieval quality
+- faithfulness to retrieved context
+- answer relevance
+- context precision
+- hallucination risk
+- citation quality
+- latency and cost
 
 ### What are common RAG challenges and solutions?
 
-| Challenge | Solution |
-|-----------|----------|
-| **Poor retrieval quality** | Optimize chunking strategy and embeddings |
-| **Context window limits** | Use reranking to reduce retrieved content |
-| **Hallucinations** | Ensure retrieved context is properly used by LLM |
-| **Latency** | Optimize retrieval indexing, use streaming |
+| Challenge | Common Response |
+|-----------|-----------------|
+| **Poor retrieval quality** | Improve parsing, chunking, embeddings, hybrid search, and reranking |
+| **Context window limits** | Retrieve less but better; rerank and compress context |
+| **Hallucinations** | Ground responses in retrieved context and evaluate faithfulness |
+| **Latency** | Optimise retrieval, indexing, model choice, caching, and streaming |
 
 ### Can I use RAG with local/self-hosted models?
 
-Yes! Many frameworks support local LLMs:
+Yes. Many frameworks support local or self-hosted model workflows:
 
 | Method | Description |
 |--------|------------|
@@ -88,7 +111,7 @@ Yes! Many frameworks support local LLMs:
 
 ### How can I contribute to RAGHub?
 
-We welcome contributions! To add a new framework, project, or resource:
+We welcome contributions. To add a new framework, project, or resource:
 
 1. Fork the repository
 2. Add your entry to the relevant section
@@ -235,7 +258,7 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for detailed guidelines.
 | RAG From Scratch     | Official LangChain guide for building a RAG pipeline from scratch             | [Website](https://github.com/langchain-ai/rag-from-scratch)    |
 
 
-## Model LeaderBoards
+## Model Leaderboards
 
 | Name                              | Description                        | Link                                                            |
 | --------------------------------- | ---------------------------------- | --------------------------------------------------------------- |
@@ -248,6 +271,8 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for detailed guidelines.
 ## License
 
 This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for details.
+
+The current licence file contains existing copyright attribution. Preserve that attribution unless repository provenance clearly supports a change.
 
 ## Join the Conversation
 
