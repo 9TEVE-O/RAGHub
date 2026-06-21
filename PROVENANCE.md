@@ -33,4 +33,4 @@ When adding or updating entries:
 
 ## Maintenance note
 
-Star counts, activity indicators, project status, pricing, licences, and product availability can change quickly. Contributors should verify metadata before submitting changes, and readers should treat listed information as a starting point for research rather than a final source of truth.
+Star counts, project status, pricing, licences, and product availability can change quickly. Contributors should verify metadata before submitting changes, avoid manual activity labels, and treat listed information as a starting point for research rather than a final source of truth.
