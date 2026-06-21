@@ -40,13 +40,13 @@ Please do not add resources that are:
 If you're adding a resource, please insert a new row into the correct category table in the README.md file, using the following format:
 
 ```md
-| Framework Name | Description (max 80 char where practical) | Website link | Github link | Github stars | Last activity on Github |
+| Framework Name | Description (max 80 char where practical) | Website link | Github link | Github stars |
 ```
 
 Example:
 
 ```md
-| LangChain | A framework for building applications with LLMs. | [Website](https://langchain.com) | [Github](https://github.com/langchain-ai/langchain) | 93.2k | 9h ago |
+| LangChain | A framework for building applications with LLMs. | [Website](https://langchain.com) | [Github](https://github.com/langchain-ai/langchain) | ![GitHub stars](https://img.shields.io/github/stars/langchain-ai/langchain?style=social) |
 ```
 
 If you don't see a category that fits your resource, feel free to create a new category by adding it both to the README.md and updating the Table of Contents accordingly.
@@ -64,17 +64,19 @@ Descriptions should be:
 
 Avoid descriptions that imply maintainers have validated, endorsed, audited, or benchmarked a resource unless that review has actually happened and is linked.
 
-## Metadata and Activity
+## Metadata
 
-GitHub stars, activity labels, pricing, licence status, hosted availability, and product scope can change quickly.
+GitHub stars, pricing, licence status, hosted availability, maintenance status, and product scope can change quickly.
 
 Before submitting a PR, contributors should:
 
 1. Check that website links resolve.
 2. Check that GitHub links point to the correct repository or organisation.
 3. Verify that the resource is still active enough to be useful.
-4. Avoid stale activity labels where the date cannot be verified.
-5. Use `-` or `--` when a field is unknown rather than guessing.
+4. Use `-` or `--` when a field is unknown rather than guessing.
+5. Do not add manual activity labels such as `1h ago`, `Yesterday`, or `Last week`.
+
+If activity metadata is reintroduced later, it should be automated rather than maintained manually.
 
 ## Updating the Table of Contents (TOC)
 
@@ -103,6 +105,7 @@ Once you've added your contribution, please:
 1. Ensure that your changes follow the format provided and are consistent with the current style.
 2. Double-check that all links work and point to the correct URLs.
 3. Remove unsupported endorsement, benchmark, security, or production-readiness claims.
-4. Submit your pull request.
+4. Confirm that no manual activity labels have been added.
+5. Submit your pull request.
 
 Thank you again for contributing to **RAGHub**. Your help makes this a more useful resource for everyone exploring the RAG ecosystem.
